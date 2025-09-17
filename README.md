@@ -13,6 +13,9 @@ Instead, it retrieves real information from trusted sources like Google Search a
 
 # ⚙️ How It Works (Architecture / Approach)
 
+## 🏗️ Architecture
+![Architecture Diagram](./gen-ai-architecture.png)
+
 ## 1. User Query Input & Rewriting
 
 • User enters a question.
