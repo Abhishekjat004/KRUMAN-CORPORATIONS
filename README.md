@@ -1,4 +1,7 @@
 # KRUMAN-CORPORATIONS
+
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
+
 ## 🔎 AI Research Assistant (Gemini-powered)
 ## 📌 Idea Behind the Application
 
@@ -6,11 +9,11 @@
 To avoid misleading outputs, this project ensures that the assistant does not rely only on its own knowledge.
 Instead, it retrieves real information from trusted sources like Google Search and Wikipedia, and then uses Gemini to summarize and generate a reliable answer.
 
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
 
+# ⚙️ How It Works (Architecture / Approach)
 
-## ⚙️ How It Works (Architecture / Approach)
-
-# 1. User Query Input & Rewriting
+## 1. User Query Input & Rewriting
 
 • User enters a question.
 
@@ -18,15 +21,15 @@ Instead, it retrieves real information from trusted sources like Google Search a
 
 • Additionally, users often ask incomplete or follow-up questions. For example:
 
-First question: “What is the impact on education after coming of AI?”
+  First question: “What is the impact on education after coming of AI?”
 
-Second question: “I can’t understand your content, can you explain again?”
+  Second question: “I can’t understand your content, can you explain again?”
 
-• A normal system would wrongly search the second question directly.
+  A normal system would wrongly search the second question directly. In this project, the assistant rewrites the query into a complete standalone research question before searching, ensuring context-aware, accurate retrieval.
 
-• In this project, the assistant rewrites the query into a complete standalone research question before searching, ensuring context-aware, accurate retrieval.
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
 
-# 2. Information Retrieval
+## 2. Information Retrieval
 
 • The rewritten query is sent to two retrievers:
 
@@ -34,9 +37,11 @@ Second question: “I can’t understand your content, can you explain again?”
 
 • Wikipedia Retriever
 
-# 3. Results are combined using an Ensemble Retriever with weighted importance.
+• Results are combined using an Ensemble Retriever with weighted importance.
 
-# 4. Summarization
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
+
+## 4. Summarization
 
 • Each retrieved document is summarized into 2–3 sentences using Gemini.
 
@@ -46,13 +51,17 @@ Second question: “I can’t understand your content, can you explain again?”
 
 • References are included to improve trust and transparency.
 
-# 5. Chat History
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
+
+## 5. Chat History
 
 • Only the user’s questions are displayed in the sidebar (like ChatGPT’s sidebar).
 
 • Option available to clear history.
 
-## 🛠️ Tools & Frameworks Used
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
+
+# 🛠️ Tools & Frameworks Used
 
 1. Streamlit
  → Interactive web UI
@@ -66,7 +75,7 @@ Second question: “I can’t understand your content, can you explain again?”
 4. SerpAPI
  → Google Search API integration
 
-[WikipediaRetriever (LangChain)] → Wikipedia content retrieval
+  [WikipediaRetriever (LangChain)] → Wikipedia content retrieval
 
 5. Python-dotenv
  → Secure API key management
