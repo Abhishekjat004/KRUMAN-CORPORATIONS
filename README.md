@@ -77,8 +77,18 @@ Instead, it retrieves real information from trusted sources like Google Search a
 
 4. SerpAPI
  → Google Search API integration
-
-  [WikipediaRetriever (LangChain)] → Wikipedia content retrieval
+    [WikipediaRetriever (LangChain)] → Wikipedia content retrieval
 
 5. Python-dotenv
  → Secure API key management
+
+## ----------------------------------------------------------------------------------------------------------------------------------------------------------------- ##
+
+# ⚠️ Disclaimer
+
+• This project uses the SerpAPI key for Google Search.
+
+• The free plan has a monthly limit of 250 searches.
+
+• Once the quota is exhausted, Google search retrieval will stop working unless you upgrade the plan or provide a new key.
+
