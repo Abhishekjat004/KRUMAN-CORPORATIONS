@@ -1,4 +1,7 @@
 streamlit
 google-generativeai
 langchain
+langchain-community
+python-dotenv
+serpapi
 wikipedia
