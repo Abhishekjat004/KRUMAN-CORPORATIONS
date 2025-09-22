@@ -17,7 +17,7 @@ gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 
 api_key = os.getenv("SERPAPI_API_KEY")
 if not api_key:
-    raise ValueError("Missing SERPAPI_API_KEY. Please set it in your environment or Streamlit secrets.")
+    raise ValueError("Missing SERPAPI_API_KEY.")
 
 serp = SerpAPIWrapper(serpapi_api_key=api_key)
 
