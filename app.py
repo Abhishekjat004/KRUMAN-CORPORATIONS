@@ -15,8 +15,11 @@ load_dotenv()
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 
+api_key = os.getenv("SERPAPI_API_KEY")
+if not api_key:
+    raise ValueError("Missing SERPAPI_API_KEY. Please set it in your environment or Streamlit secrets.")
 
-serp = SerpAPIWrapper(serpapi_api_key=os.environ.get("SERPAPI_API_KEY")) # requires SERPAPI_API_KEY
+serp = SerpAPIWrapper(serpapi_api_key=api_key)
 
 class GoogleRetriever(BaseRetriever):
     def _get_relevant_documents(self, query, run_manager=None):
