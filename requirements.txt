@@ -1,3 +1,4 @@
+google-search-results
 streamlit
 google-generativeai
 langchain
@@ -5,4 +6,3 @@ langchain-community
 python-dotenv
 serpapi
 wikipedia
-google-search-results
