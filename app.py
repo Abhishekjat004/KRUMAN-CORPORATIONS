@@ -109,8 +109,7 @@ if st.button("Search & Summarize"):
     with st.spinner("Generating final answer..."):
         combined_text = "\n".join([s['text'] for s in summaries])
         final = gemini_model.generate_content(
-            f"""You are a AI Research Assistant You have to answer only ai related question if question is not understandable and not related to ai then 
-            please don't give any answer and just say that i am ai research assistant so please ask me question related to an ai only. Write a detailed, user-friendly research answer 
+            f""" Write a detailed, user-friendly research answer 
             based on these summaries:\n{combined_text}. you have to answer only based on these summaries and not from your own knowledge.
             Ensure it's comprehensive and informative.
             Add references if possible."""
